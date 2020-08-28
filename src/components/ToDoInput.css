@@ -1,0 +1,128 @@
+.apSidebar {
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 22%;
+    padding-top: var(--app-sidebar-padding);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    font-size: 25px;
+    background-color:white;
+
+}
+.account{
+    width: 20%;
+    height: 10%;
+    padding: 0;
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    border-radius: 50%;
+    color: var(--text-primary-color);
+    transition: color var(--animation-speed-medium);
+    font-size: inherit;
+}
+.account.image{
+    margin-top: 10%;
+    margin-left: 10%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    border-radius: 50%;
+    color: var(--text-primary-color);
+    transition: color var(--animation-speed-medium);
+    font-size: inherit;
+    position: absolute;
+    cursor: pointer;
+    overflow: visible;
+    margin: 0;
+    appearance: initial;
+    background-color: initial;
+    align-items: baseline;
+    color: inherit;
+    text-align: start !important;
+    padding: initial;
+    border: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+}
+.userName{
+    margin-top: -20%;
+    margin-left: 32%;
+    padding:0;
+    position: relative;
+    display: block;
+    float: left;
+    justify-self: flex-start;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    line-height: inherit;
+    text-align: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowra;
+    text-transform: none;
+    box-sizing: border-box;
+}
+
+.label{
+    background-color: #0080ff;
+    color: white;
+    margin-top: 20%;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.form-control{
+    width: 40%;
+    height: 10%;
+    margin-top:15%;
+    margin-left: 5%;
+    font-size: 24px;
+
+}
+.form-control-note{
+    width: 100%;
+    height: 5%;
+    margin-top:10%;
+    margin-left: 5%;
+    font-size: 24px;
+}
+.createAction{
+    margin-top:20%;
+    width: 80%;
+    height: 20%;
+    margin-left: 10%;
+    font-size: 25px;
+    background-color: #0080ff;
+    color: white;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+}
+.editAction{
+    margin-top:20%;
+    width: 80%;
+    height: 20%;
+    margin-left: 10%;
+    font-size: 25px;
+    background-color: #64FE2E;
+    color: white;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+}

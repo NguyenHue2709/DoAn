@@ -1,0 +1,20 @@
+.apSidebarList {
+    margin-left: 30%;
+    margin-top: 15%;
+    height: 60vh;
+    width: 30%;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    font-size: 18px;
+    background-color:white;
+    border-radius: 5%;
+
+}
+.text{
+    margin-left:10% ;
+}
+.btn-danger.btn-block.text-captitakize.mt-5{
+    
+}
