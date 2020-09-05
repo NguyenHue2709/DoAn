@@ -5,7 +5,7 @@ import ToDoItem from "./ToDoItem"
 export default class ToDoList extends Component {
     
     render(){
-        const {items, clearList, handleDelete, handleEdit} = this.props;
+        const {items, clearList, handleDelete, handleEdit, markComplete} = this.props;
         return(
             <ul className = "list-group">
                
@@ -20,7 +20,10 @@ export default class ToDoList extends Component {
                             return (<ToDoItem key = {item.id} 
                                 title = {item.title}
                                 handleDelete = {() => handleDelete(item.id)}
-                                handleEdit = {() => handleEdit(item.id)}/>);
+                                done = {item.done}
+                                handleEdit = {() => handleEdit(item.id)}
+                                markComplete = {() => markComplete(item.id)} 
+                                />);
 
                         })
                         

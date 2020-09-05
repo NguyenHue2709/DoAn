@@ -1,6 +1,8 @@
 .item{
     margin-top:3%;
-    margin-left: -3%;
+    margin-left: 1%;
+    list-style-type: none;
+    
     
 }
 .titled{
@@ -9,5 +11,10 @@
 }
 .todo-icon{
     margin-left:70%;
+   
 
+}
+.done {
+    text-decoration: line-through;
+    float: left;
 }

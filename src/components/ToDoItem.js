@@ -3,19 +3,22 @@ import './ToDoItem.css'
 
 export default class ToDoItem extends Component {
     render(){
-      const {title, handleDelete, handleEdit} = this.props;
+        const {title, done, handleDelete, handleEdit, markComplete} = this.props;
         return(
-               <ul className = "item">
+               <li className = "item">
                   
-                    <p className = "titled">{title}</p>
-                   <div className = "todo-icon">
-                        <span className = "mx-2 text-success">
-                            <i class="far fa-check-circle"></i>
+                  <p className= {done
+                        ? "done"
+                        : "titled"}>{title}</p>
+                   <div className = "todo-icon" >
+                        <span   
+                         onClick = {markComplete}>
+                            <i className="far fa-check-circle"></i>
                         
                         </span>
                    
                        <span className = "mx-2 text-success" onClick = {handleEdit}>
-                            <i class="fas fa-pen"></i>
+                            <i className="fas fa-pen"></i>
                         
                        </span>
                        <span className = "mx-2 text-danger" onClick = {handleDelete}>
@@ -25,7 +28,7 @@ export default class ToDoItem extends Component {
 
                    </div>
 
-               </ul>
+               </li>
                
         );
     }
