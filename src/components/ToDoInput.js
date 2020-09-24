@@ -8,7 +8,7 @@ export default class ToDoInput extends Component {
         return(
             <div className = "apSidebar">
                 <div className = "account">
-                    <img className="image" src="/images/meo.jpg" alt="Account"/>  
+                    <img alt="Remy Sharp" src="/images/meo.jpg" />  
                 </div>
                 <button className = "userName" type = "text">Nguyễn Ngọc Huế</button>
                 <label className = "label">What do you do today?</label>
@@ -26,7 +26,7 @@ export default class ToDoInput extends Component {
                         
                     </div>
                     <div className = "input-group">
-                        <input className="form-control-note" type="text" placeholder= "Note" 
+                        <input className="form-control" type="text" placeholder= "Note" 
                         />
                     </div>
                     

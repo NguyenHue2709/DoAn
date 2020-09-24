@@ -10,11 +10,44 @@
     font-size: 18px;
     background-color:white;
     border-radius: 5%;
+   
 
 }
 .text{
-    margin-left:10% ;
+    margin-left:5% ;
 }
-.btn-danger.btn-block.text-captitakize.mt-5{
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    border-radius: 5%;
+    border: none;
+    position: relative;
+
+    background-color: #fff;
+    height: 10%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    display: block;
+    margin-top: -10,4%;
+    --CardScrollView-index: 0;
+
+}
+
+.btn-clear{
+   
+    font-size: 20px;
+    border-radius: 5%;
+    border: none;
+    
+    flex: 1, 1;
+    background-color:#DF0101;
+    color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    transition: all;
     
 }

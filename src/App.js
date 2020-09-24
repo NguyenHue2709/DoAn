@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid'; //uuid là packege dung chung, sử dụng 
 uuidv4();
 
 class App extends Component {
-  state = { //khai báo state 
+  state = { //khai báo state  // passing Data to components
     items: [],    // là một mảng trống
     id:uuidv4(),
     item:"",
@@ -22,15 +22,25 @@ class App extends Component {
       item: e.target.value // trả về text khi đã kiểm tra id
     });
   };
-  
+  validationForm() {
+    const re =  /\S/;
+    //Kiểm tra email
+    if (re.test(this.state.item)) return false;
+    return true;
+  }
   handleSubmit = (e) => {
+   
     console.info("test")
-    e.preventDefault();
+    e.preventDefault();// chặng các sự kiện form
     const newItem = {
       id: this.state.id,
       title: this.state.item
     }
-    //console.log(newItem);
+    if(this.validationForm()) {
+      alert('Let add your action!')
+      return false;
+    }
+    //console.log(newItem); in ra id và title trong console
     const updateItems = [...this.state.items, newItem];
     this.setState({
       items:updateItems,
@@ -40,6 +50,7 @@ class App extends Component {
       editItem: false,
      
     });
+
   };
   clearList = () => {
     this.setState({
@@ -75,6 +86,7 @@ class App extends Component {
      items: this.state.items
    }); 
  };
+ 
   render(){
     return (
       

@@ -1,20 +1,31 @@
 .item{
     margin-top:3%;
-    margin-left: 1%;
+    margin-left: 3%;
     list-style-type: none;
-    
+    flex: 1;
+    min-width: 0;
     
 }
 .titled{
     float: left;
     font-size: 22px;
+    overflow: hidden;
+    white-space:  nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
 }
 .todo-icon{
-    margin-left:70%;
+    margin-left:78%;
    
 
 }
 .done {
     text-decoration: line-through;
     float: left;
+    color: #D8D8D8;
+    overflow: hidden;
+    white-space:  nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
+   
 }
