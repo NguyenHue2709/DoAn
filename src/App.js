@@ -24,7 +24,7 @@ class App extends Component {
   };
   validationForm() {
     const re =  /\S/;
-    //Kiểm tra email
+    
     if (re.test(this.state.item)) return false;
     return true;
   }

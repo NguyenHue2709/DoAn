@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './ToDoItem.css'
+//import Dialog from '.components/Dialog'
 
 export default class ToDoItem extends Component {
     render(){
         const {title, done, handleDelete, handleEdit, markComplete} = this.props;
+        //const {handleClickOpen} = this.props;
         return(
                <li className = "item">
                   

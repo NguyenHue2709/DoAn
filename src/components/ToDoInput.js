@@ -1,57 +1,11 @@
 import React, { Component } from 'react';
 //import React from 'react';
 import './ToDoInput.css'; 
-import DatePicker from "react-datepicker";
-//import TimePicker from 'react-time-picker';
-
-//import { TimePicker } from 'antd';
-//import moment from 'moment';
-
-//import Picker from "./components/Picker"
-//import 'react-times/css/material/default.css';
-// or you can use classic theme
-//import 'react-times/css/classic/default.css';
-
-
- 
-import "react-datepicker/dist/react-datepicker.css";
 
 export default class ToDoInput extends Component {
 
     
-    state = {
-        startDate: new Date()
-    };
-
-    handleDateChange = date => {
-        this.setState({
-            startDate: date
-        });
-    };
-    /*onTimeChange(options) {
-        // do something
-      }
     
-      onFocusChange(focusStatue) {
-        // do something
-      }
-
-    /*state = {
-        startDate: new Date()
-      };
-      state = {
-        time: '10:00',
-      }
-      
-  onChange = time => this.setState({ time })
-     
-      handleDateChange = date => {
-        this.setState({
-          startDate: date
-        });
-      };*/
-      
-
     render(){
         const{item,handleChange, handleSubmit, editItem} = this.props;
         const format = 'HH:mm';
@@ -86,24 +40,14 @@ export default class ToDoInput extends Component {
                         />
                     </div>
 
-                    <div>
-                    <div>
-                        <DatePicker className = "datePicker"
-                            selected={this.state.startDate}
-                            onChange={this.handleDateChange}
-                            placeholderText = "Date"
-                        />
-                    </div>
                     
-                        
-
-                    </div>
                    
                 </form>
                 
-               
+              
             </div>
             
         );
+     
     }
 }
