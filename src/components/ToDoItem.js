@@ -11,6 +11,10 @@ export default class ToDoItem extends Component {
                         ? "done"
                         : "titled"}>{title}</p>
                    <div className = "todo-icon" >
+                        <span className="mx-2 text">
+                            <i class="fas fa-info-circle"></i>
+                       </span>
+
                         <span   
                          onClick = {markComplete}>
                             <i className="far fa-check-circle"></i>
@@ -21,10 +25,12 @@ export default class ToDoItem extends Component {
                             <i className="fas fa-pen"></i>
                         
                        </span>
+
                        <span className = "mx-2 text-danger" onClick = {handleDelete}>
                            <i className = "fas fa-trash"/>
 
                        </span>
+                       
 
                    </div>
 

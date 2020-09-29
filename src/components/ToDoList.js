@@ -17,7 +17,7 @@ export default class ToDoList extends Component {
                     useWindow={false}>
                     <div>
                         <div className = "text">
-                            <h3>Today</h3>
+                            <h3>Your schedule</h3>
                         </div>
                         <li className = "list-group">
                         
