@@ -7,8 +7,8 @@ export default class ToDoInput extends Component {
     
     
     render(){
-        const{item,handleChange, handleSubmit, editItem} = this.props;
-        const format = 'HH:mm';
+        const{item, note ,handleChange, handleChanNote, handleSubmit, editItem} = this.props;
+        //const format = 'HH:mm';
         //const [selectedDate, setSelectedDate] = React.useState(new Date());
 
         /*const handleDateChange = (date) => {
@@ -16,7 +16,9 @@ export default class ToDoInput extends Component {
         };*/
        
         return(
+          
             <div className = "apSidebar">
+               
                 <div className = "account">
                     <img alt="Remy Sharp" src="/images/meo.jpg" />  
                 </div>
@@ -32,11 +34,12 @@ export default class ToDoInput extends Component {
                     }>{editItem ? "Edit item":"+Creat a task"}</button>
                     <div className = "input-group">
                         <input className="form-control" type="text" placeholder= "I want to..."
-                         value = {item} onChange = {handleChange}/>
+                         value = {item}  onChange = {handleChange}/>
                         
                     </div>
                     <div className = "input-group">
                         <input className="form-control" type="text" placeholder= "Note" 
+                        value = {note} onChange = {handleChanNote}
                         />
                     </div>
 
@@ -46,6 +49,7 @@ export default class ToDoInput extends Component {
                 
               
             </div>
+            
             
         );
      

@@ -5,7 +5,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 export default class ToDoList extends Component {    
     render(){
-        const {items, clearList, handleDelete, handleEdit, markComplete} = this.props;
+        const {items, clearList, handleDelete, handleEdit, markComplete, openDialog} = this.props;
         return(
             
                 <div className = "apSidebarList" >
@@ -29,9 +29,10 @@ export default class ToDoList extends Component {
                                         handleDelete = {() => handleDelete(item.id)}
                                         done = {item.done}
                                         handleEdit = {() => handleEdit(item.id)}
-                                        markComplete = {() => markComplete(item.id)} 
+                                        markComplete = {() => markComplete(item.id)}
+                                        openDialog = {() => openDialog(item.id)}
                                         />);
-
+ 
                                 })
                             
                             }

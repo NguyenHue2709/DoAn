@@ -1,0 +1,38 @@
+.dialogStyle {
+    width: 43%;
+    max-width: 40%;
+    margin: 0 auto;
+    height: 75%;
+    position: fixed;
+    margin-left: 60%;
+    margin-top: 25%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    background-color: white;
+    padding: 10px 20px 40px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+
+}
+.buttonStyle{
+    background-color: turquoise;
+    cursor: pointer;
+    width: 7%;
+    height: 7%;
+    padding:1px;
+    text-align: center;
+    color: white;
+    border: none;
+    align-self: flex-end;
+    border-radius: 8%;
+}
+.listnote-group{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    font-size: 18px;
+    background-color:white;
+    border-radius: 5%;
+    list-style: none;
+}

@@ -113,6 +113,7 @@
     border: none;
     position: relative;
     border-radius: 5px;
+    outline: none;
 }
 .editAction{
     margin-top:20%;
@@ -125,6 +126,7 @@
     border: none;
     position: relative;
     border-radius: 5px;
+    outline: none;
 }
 .datePicker{
     margin-top: 10%;

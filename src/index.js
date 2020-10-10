@@ -5,11 +5,13 @@ import App from './App';
 import Picker from './components/Picker'
 //import Dialog from './components/Dialog'
 import * as serviceWorker from './serviceWorker';
+//import Account from './Account';
+//import fire from './fire';
 
 ReactDOM.render(
   <React.StrictMode>
-   
-    <App />
+    <App/>
+    
     <Picker />
     
   </React.StrictMode>,

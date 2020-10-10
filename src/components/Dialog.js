@@ -1,52 +1,44 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import React, {Component} from 'react'
+import './Dialog.css'
+import ToDoNote from './ToDoNote'
 
-export default function AlertDialog() {
-  const [open, setOpen] = React.useState(false);
+class Dialog extends Component {
+  
+  render() {
+    const {items} = this.props
+    let dialog = (
+      <div className = 'dialogStyle'>
+        <button className = "buttonStyle" onClick = {this.props.onClose}>x</button>
+        <div>
+          {this.props.children}
+                    <li className = "listnote-group">
+                        
+                        {
+                            items.map(note => {
+                                
+                                return (<ToDoNote key = {note.id} 
+                                    titleNote = {note.titleNote}
+                                    
+                                    />);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  return (
-    <div>
-        <span className="mx-2 text" onClick = {handleClickOpen}>
-                            <i class="fas fa-info-circle"></i>
-                       </span>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open alert dialog
-      </Button>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous location data to
-            Google, even when no apps are running.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Disagree
-          </Button>
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
-  );
+                            })
+                        
+                        }
+                    </li>
+        
+        </div>
+        
+        
+      </div>
+    );
+    if (! this.props.isOpen) {
+      dialog = null;
+    }
+    return(
+      <div>
+        {dialog}
+      </div>
+    );
+  }
 }
+export default Dialog;

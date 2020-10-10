@@ -4,7 +4,7 @@ import './ToDoItem.css'
 
 export default class ToDoItem extends Component {
     render(){
-        const {title, done, handleDelete, handleEdit, markComplete} = this.props;
+        const {title, done, handleDelete, handleEdit, markComplete,openDialog} = this.props;
         //const {handleClickOpen} = this.props;
         return(
                <li className = "item">
@@ -13,9 +13,12 @@ export default class ToDoItem extends Component {
                         ? "done"
                         : "titled"}>{title}</p>
                    <div className = "todo-icon" >
-                        <span className="mx-2 text">
+                      
+                       <span className="mx-2 text" onClick = {openDialog}>
                             <i class="fas fa-info-circle"></i>
                        </span>
+                       
+                       
 
                         <span   
                          onClick = {markComplete}>
