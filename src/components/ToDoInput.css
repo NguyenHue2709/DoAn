@@ -9,7 +9,7 @@
     position: fixed;
     font-size: 25px;
     background-color:white;
-
+    float: left;
 }
 .account{
     width: 20%;
@@ -114,6 +114,8 @@
     position: relative;
     border-radius: 5px;
     outline: none;
+    text-align: center;
+    padding:2px
 }
 .editAction{
     margin-top:20%;
@@ -127,12 +129,14 @@
     position: relative;
     border-radius: 5px;
     outline: none;
+    text-align: center;
+    padding:2px
 }
 .datePicker{
-    margin-top: 10%;
+    margin-top: 15%;
     width: 50%;
     height: 90%;
-    margin-left:5% ;
+    margin-left:10% ;
     float: left;
 }
 .far.fa-calendar{

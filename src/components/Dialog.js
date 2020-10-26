@@ -3,7 +3,6 @@ import './Dialog.css'
 import ToDoNote from './ToDoNote'
 
 class Dialog extends Component {
-  
   render() {
     const {items} = this.props
     let dialog = (

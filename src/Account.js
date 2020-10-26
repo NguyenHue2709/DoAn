@@ -1,16 +1,16 @@
 //import { set } from 'date-fns';
 import React, { useState , useEffect} from 'react';
-import './Account.css';
 import fire from './fire';
-import Login from './Login'
-//import App from './App'
+import Login from './Login';
+//import App from './App';
+import Logout from './Logout';
 
 
 const Account = () => {
     const [user, setUser] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [emailError, setEmailError] = useState("1");
+    const [emailError, setEmailError] = useState("");
     const [passwordEror, setPasswordEror] = useState("");
     const [hasAccount, setHasAccount] = useState(false);
     const clearInputs = () =>{
@@ -34,7 +34,7 @@ const Account = () => {
                 case "auth/user-not-found":
                     setEmailError(err.message);
                     break;
-                case "auth/wrong-pasword":
+                case "auth/wrong-password":
                     setPasswordEror(err.message);
                     break;
             }
@@ -51,7 +51,7 @@ const Account = () => {
                 case "auth/invalid-email":
                     setEmailError(err.message);
                     break;
-                case "auth/wreak-pasword":
+                case "auth/wreak-password":
                     setPasswordEror(err.message);
                     break;
             }
@@ -77,7 +77,12 @@ const Account = () => {
 
     return(
         <div>
+           
             {user ? (
+                
+                <Logout handleLogout = {handleLogout} /> 
+                
+            ):(
                 <Login
                 email = {email} 
                 setEmail = {setEmail}
@@ -89,10 +94,9 @@ const Account = () => {
                 setHasAccount = {setHasAccount}
                 emailError = {emailError}
                 passwordEror = {passwordEror} />
-            ):(
-               <di></di>
             
             )}
+             
             
         </div>
     )

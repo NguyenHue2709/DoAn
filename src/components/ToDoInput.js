@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import './ToDoInput.css'; 
 
 export default class ToDoInput extends Component {
-
-    
-    
     render(){
         const{item, note ,handleChange, handleChanNote, handleSubmit, editItem} = this.props;
         //const format = 'HH:mm';
@@ -24,8 +21,6 @@ export default class ToDoInput extends Component {
                 </div>
                 <button className = "userName" type = "text">Nguyễn Ngọc Huế</button>
                 <label className = "label">What do you do today?</label>
-               
-                
                 <form onSubmit = {handleSubmit}>
                     <button type = "submit" className = {
                         editItem
@@ -42,9 +37,6 @@ export default class ToDoInput extends Component {
                         value = {note} onChange = {handleChanNote}
                         />
                     </div>
-
-                    
-                   
                 </form>
                 
               

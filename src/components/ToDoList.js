@@ -7,7 +7,6 @@ export default class ToDoList extends Component {
     render(){
         const {items, clearList, handleDelete, handleEdit, markComplete, openDialog} = this.props;
         return(
-            
                 <div className = "apSidebarList" >
                 <InfiniteScroll style = {{ height: "100%", flex: "1 1", scrollBehavior:"smooth",
                 overflowX:"hidden", overflowY:"75%"}} pageStart={0}
@@ -17,7 +16,7 @@ export default class ToDoList extends Component {
                     useWindow={false}>
                     <div>
                         <div className = "text">
-                            <h3>Your schedule</h3>
+                            <h3 className = "schedule">Your schedule</h3>
                         </div>
                         <li className = "list-group">
                         
@@ -45,10 +44,7 @@ export default class ToDoList extends Component {
                         </button>
                     </div >
                 </div>
-                
-                
-           
-            
+    
         );
     }
 }

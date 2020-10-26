@@ -122,8 +122,7 @@ class App extends Component {
          <header className="App-header">
           <img className="Header-logo" src="/images/bg2.webp" alt="Logo"/>
           
-          
-        </header>  
+        </header> 
         
           <ToDoInput item = {this.state.item}  handleChange = {this.handleChange}
            handleSubmit={this.handleSubmit} editItem = {this.state.editItem}

@@ -11,6 +11,8 @@
     appId: "1:232113818348:web:b85174a5895dc9117db3c9",
     measurementId: "G-68F9VR3QWW"
   };
+
+
   
   const fire = firebase.initializeApp(firebaseConfig);
   export default fire;

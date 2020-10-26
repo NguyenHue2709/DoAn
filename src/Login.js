@@ -1,38 +1,33 @@
 import React from "react";
 import './Login.css';
-
-
 const Login = (props) => {
     const{email, setEmail, password, setPassword, handleLogin, handleSignUp, hasAccount, setHasAccount, emailError, passwordEror} = props;
-
     return(
         <section>
             <div className="loginContainer">
-                <label>
-                    Usre Name
-                </label>
-                <input type = "text" autoFocus required 
+                <h3 className = "welcome">Welcome to ToDoList</h3>
+                <input type = "text" autoFocus required  className ="input-text"
                 value = {email} 
-                onChange = {(e) => setEmail(e.target.value)}></input>
+                onChange = {(e) => setEmail(e.target.value)}
+                placeholder ="Your Email"></input>
                 <p className = "errorMsg">{emailError}</p>
-                <label>
-                    Password
-                </label>
-                <input type = "password" autoFocus required 
+            
+                <input type = "password" autoFocus required className="input-pw"
                 value = {password} 
-                onChange = {(e) => setPassword(e.target.value)}></input>
+                onChange = {(e) => setPassword(e.target.value)}
+                placeholder="Your password"></input>
                 <p className = "errorMsg">{passwordEror}</p>
                 <div className = "btnContainer">
                     {hasAccount ? (
                         <>
-                        <button onClick={handleLogin}></button>
-                        <p>Don't have an account?<span onClick={() => setHasAccount(!hasAccount)}>
+                        <button onClick={handleLogin} className="signin">Sign in</button>
+                        <p className = "setAccount">Don't have an account?<span onClick={() => setHasAccount(!hasAccount)} className = "spanIn">
                             Sign Up</span></p>
                         </>
                     ):(
                         <>
-                        <button onClick = {handleSignUp}>Sign Up</button>
-                        <p>Have an Account?<span>Sign In</span></p>
+                        <button onClick = {handleSignUp} className="signUp">Sign Up</button>
+                        <p className="setAccount">Have an Account?<span onClick={()=>setHasAccount(!hasAccount)} className = "spanIn">Sign In</span></p>
                         </>
                     )}
 
