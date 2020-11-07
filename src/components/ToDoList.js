@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import './ToDoList.css'
 import ToDoItem from "./ToDoItem"
+
+
 import InfiniteScroll from 'react-infinite-scroller';
 
 export default class ToDoList extends Component {    
@@ -19,7 +21,6 @@ export default class ToDoList extends Component {
                             <h3 className = "schedule">Your schedule</h3>
                         </div>
                         <li className = "list-group">
-                        
                             {
                                 items.map(item => {
                                     
@@ -31,9 +32,7 @@ export default class ToDoList extends Component {
                                         markComplete = {() => markComplete(item.id)}
                                         openDialog = {() => openDialog(item.id)}
                                         />);
- 
                                 })
-                            
                             }
                         </li>
                     </div>

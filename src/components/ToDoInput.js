@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
-//import React from 'react';
 import './ToDoInput.css'; 
-
 export default class ToDoInput extends Component {
     render(){
         const{item, note ,handleChange, handleChanNote, handleSubmit, editItem} = this.props;
-        //const format = 'HH:mm';
-        //const [selectedDate, setSelectedDate] = React.useState(new Date());
-
-        /*const handleDateChange = (date) => {
-            setSelectedDate(date);
-        };*/
-       
         return(
-          
             <div className = "apSidebar">
-               
                 <div className = "account">
                     <img alt="Remy Sharp" src="/images/meo.jpg" />  
                 </div>
@@ -30,7 +19,6 @@ export default class ToDoInput extends Component {
                     <div className = "input-group">
                         <input className="form-control" type="text" placeholder= "I want to..."
                          value = {item}  onChange = {handleChange}/>
-                        
                     </div>
                     <div className = "input-group">
                         <input className="form-control" type="text" placeholder= "Note" 
@@ -38,12 +26,7 @@ export default class ToDoInput extends Component {
                         />
                     </div>
                 </form>
-                
-              
-            </div>
-            
-            
+            </div>   
         );
-     
     }
 }
